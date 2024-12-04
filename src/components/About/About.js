@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import laptopImg from "../../Assets/AboutMeImg.jpg";
 import Particle from "../Particle";
-import Github from "./Github";
-import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
 
 function About() {
@@ -22,26 +21,22 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+              Un poco más sobre <strong className="purple">mi</strong>
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
+          <Col md={4} style={{ margin: "auto" }} className="about-img">
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+          Habilidades <strong className="purple">tecnicas </strong>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
+          <strong className="purple">Herramientas</strong> que uso
         </h1>
         <Toolstack />
 

@@ -1,13 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import { Col, Container, Row } from "react-bootstrap";
+import MortShopProductsPage from "../../Assets/Projects/MortShopProductsPage.png";
+import WheelUSCreateRidePage from "../../Assets/Projects/WheelUSCreateRidePage.png";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import ProjectCard from "./ProjectCards";
 
 function Projects() {
   return (
@@ -15,76 +11,28 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Mis <strong className="purple">proyectos</strong> más recientes
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={WheelUSCreateRidePage}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="WheelUS"
+              description="WheelUS es una innovadora plataforma de transporte universitario diseñada para conectar estudiantes mediante un sistema de reservas y creación de viajes. Con una interfaz interactiva basada en un mapa, los usuarios pueden reservar o crear viajes personalizados, seleccionando paradas a través de clics en el mapa con Leaflet y OpenStreetMap. El sistema también incluye chat en tiempo real y notificaciones instantáneas, utilizando WebSockets para una comunicación fluida. Además, permite cambiar entre roles de pasajero y conductor, ofreciendo experiencias personalizadas. Desarrollado con React, Node.js, Firebase y JWT, WheelUS combina tecnologías avanzadas para ofrecer una solución de transporte eficiente, escalable y fácil de usar."
+              ghLink="https://github.com/Jhojan-Jimenez/WheelUS-Front"
+              demoLink="https://wheel-us-front.vercel.app"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={MortShopProductsPage}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              title="MortShop"
+              description="MortShop es una plataforma de e-commerce moderna y de alto rendimiento, desarrollada con Next.js, TypeScript y desplegada en Vercel. Destaca por su SSR para mejorar el SEO, componentes React reutilizables, integración eficiente de APIs y seguridad robusta en la autenticación. Además, incorpora tecnologías como Django, PostgreSQL y Djoser (JWT) para ofrecer una experiencia segura y fluida, con funciones de simulación de compra, manejo de emails y subida de imágenes a la nube."
               ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              demoLink="https://front-django-lemon.vercel.app"
             />
           </Col>
         </Row>

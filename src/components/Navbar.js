@@ -5,13 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import {
   AiOutlineFundProjectionScreen,
   AiOutlineHome,
-  AiOutlineUser
+  AiOutlineUser,
 } from "react-icons/ai";
-import { ImBlog } from "react-icons/im";
 import { Link } from "react-router-dom";
-import logo from "../Assets/logo.png";
-
 import { CgFileDocument } from "react-icons/cg";
+import Type from "./Home/Type";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -36,7 +34,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <Type />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -86,16 +84,6 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
             </Nav.Item>
           </Nav>
