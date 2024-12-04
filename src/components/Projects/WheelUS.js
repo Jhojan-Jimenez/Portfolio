@@ -71,14 +71,14 @@ function WheelUSCard(props) {
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  <span className="purple"> Notificaciones</span>
+                  <span className="purple"> Notificaciones </span>
                   instantáneas a través de{" "}
                   <span className="purple"> WebSockets</span> para comunicación
                   fluida
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Cambio entre <span className="purple"> roles</span>
+                  Cambio entre <span className="purple"> roles </span>
                   de pasajero y conductor para experiencias personalizadas
                 </div>
                 <div className="feature-item">
