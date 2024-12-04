@@ -2,13 +2,20 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+
+  if (location.pathname === "/") {
+    return null;
+  }
+
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="6" className="footer-copywright">
-          <h3>Jhojan Jimenez portfolio</h3>
+          <h3>Jhojan Jimenez Portfolio</h3>
         </Col>
         <Col md="6" className="footer-body">
           <ul className="footer-icons">

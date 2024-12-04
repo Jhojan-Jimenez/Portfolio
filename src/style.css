@@ -255,11 +255,9 @@ button:focus {
 }
 
 .home-section {
+  width: 100% !important;
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
@@ -320,6 +318,7 @@ button:focus {
 
 .home-about-section {
   position: relative;
+  margin: auto !important;
   padding-bottom: 70px !important;
 }
 

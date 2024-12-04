@@ -5,8 +5,18 @@ import Home2 from "./Home2";
 
 function Home() {
   return (
-    <section>
-      <Container fluid className="home-section" id="home">
+    <section style={{ height: "100%" }}>
+      <Container
+        fluid
+        className="home-section"
+        id="home"
+        style={{
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Particle />
         <Home2 />
       </Container>
