@@ -5,8 +5,10 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { Row, Col } from "react-bootstrap";
 import "./ProjectCard.css";
+import { useTranslation } from "react-i18next";
 
 function MortShopCard(props) {
+  const { t } = useTranslation();
   return (
     <Card className="project-card">
       <Card.Body className="p-0">
@@ -37,44 +39,44 @@ function MortShopCard(props) {
               </Card.Title>
 
               <Card.Text className="project-description mb-4">
-                MortShop es una plataforma de{" "}
-                <span className="purple">e-commerce </span>
-                moderna y de alto rendimiento, desarrollada con Next.js,
-                TypeScript y desplegada en Vercel.
+                {t("projectDescription")}{" "}
+                <span className="purple">{t("ecommerce")}</span>{" "}
+                {t("projectTechStack")}
               </Card.Text>
 
               <div className="features-list mb-4">
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  <span className="purple">SSR </span>
-                  (Server-Side Rendering) para mejorar el SEO.{" "}
+                  <span className="purple">{t("ssr")}</span> {t("featureSEO")}
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Integración eficiente de <span className="purple">APIs</span>
+                  {t("featureAPIIntegration")}{" "}
+                  <span className="purple">{t("apis")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Aplicación de base de datos 
-                  <span className="purple"> SQL</span>
+                  {t("featureDatabase")}{" "}
+                  <span className="purple">{t("sql")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Seguridad robusta en la autenticación usando{" "}
-                  <span className="purple">Djoser y JWT</span>
+                  {t("featureSecurity")}{" "}
+                  <span className="purple">{t("djoserJWT")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Funciones de simulación de compra.
+                  {t("featureSimulation")}
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Manejo de transacciones por{" "}
-                  <span className="purple"> emails</span>
+                  {t("featureTransactions")}{" "}
+                  <span className="purple">{t("emails")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Subida de imágenes a la <span className="purple"> nube</span>
+                  {t("featureImageUpload")}{" "}
+                  <span className="purple">{t("cloud")}</span>
                 </div>
               </div>
 
@@ -87,7 +89,7 @@ function MortShopCard(props) {
                     className="project-btn"
                   >
                     <BsGithub className="me-2" />
-                    GitHub
+                    {t("github")}
                   </Button>
 
                   {props.demoLink && (
@@ -98,7 +100,7 @@ function MortShopCard(props) {
                       className="project-btn"
                     >
                       <CgWebsite className="me-2" />
-                      Demo
+                      {t("demo")}
                     </Button>
                   )}
                 </div>

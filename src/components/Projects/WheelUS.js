@@ -5,8 +5,10 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { Row, Col } from "react-bootstrap";
 import "./ProjectCard.css";
+import { useTranslation } from "react-i18next";
 
 function WheelUSCard(props) {
+  const { t } = useTranslation();
   return (
     <Card className="project-card">
       <Card.Body className="p-0">
@@ -37,54 +39,55 @@ function WheelUSCard(props) {
               </Card.Title>
 
               <Card.Text className="project-description mb-4">
-                WheelUS es una innovadora{" "}
-                <span className="purple">plataforma de transporte </span>
-                universitario diseñada para conectar estudiantes mediante un
-                sistema de reservas y creación de viajes
+                {t("project.description")}{" "}
+                <span className="purple">{t("project.transportPlatform")}</span>
+                {t("project.details")}
               </Card.Text>
 
               <div className="features-list mb-4">
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Interfaz interactiva basada en un{" "}
-                  <span className="purple">mapa</span>
+                  {t("project.featureInteractiveInterface")}{" "}
+                  <span className="purple">{t("project.map")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Los usuarios pueden{" "}
-                  <span className="purple">reservar o crear</span> viajes
-                  personalizados
+                  {t("project.featureBookingAndCreation")}{" "}
+                  <span className="purple">{t("project.customTrips")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Selección de paradas a través de clics en el mapa utilizando
-                  Leaflet y<span className="purple"> OpenStreetMap</span>
+                  {t("project.featureStopsSelection")}{" "}
+                  <span className="purple">
+                    {t("project.leafletOpenStreetMap")}
+                  </span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Sistema de <span className="purple"> chat</span> en tiempo
-                  real
+                  {t("project.featureRealtimeChat")}{" "}
+                  <span className="purple">{t("project.chat")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Subida de imágenes a la <span className="purple"> nube</span>
+                  {t("project.featureImageUpload")}{" "}
+                  <span className="purple">{t("project.cloud")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  <span className="purple"> Notificaciones </span>
-                  instantáneas a través de{" "}
-                  <span className="purple"> WebSockets</span> para comunicación
-                  fluida
+                  <span className="purple">
+                    {t("project.notifications")}
+                  </span>{" "}
+                  {t("project.instantNotifications")}
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Cambio entre <span className="purple"> roles </span>
-                  de pasajero y conductor para experiencias personalizadas
+                  {t("project.featureRoleSwitch")}{" "}
+                  <span className="purple">{t("project.roles")}</span>
                 </div>
                 <div className="feature-item">
                   <span className="bullet">• </span>
-                  Manejo de información con bases de datos{" "}
-                  <span className="purple"> no SQL</span>
+                  {t("project.featureDatabaseHandling")}{" "}
+                  <span className="purple">{t("project.noSQL")}</span>
                 </div>
               </div>
 
@@ -97,7 +100,7 @@ function WheelUSCard(props) {
                     className="project-btn"
                   >
                     <BsGithub className="me-2" />
-                    GitHub
+                    {t("project.github")}
                   </Button>
 
                   {props.demoLink && (
@@ -108,7 +111,7 @@ function WheelUSCard(props) {
                       className="project-btn"
                     >
                       <CgWebsite className="me-2" />
-                      Demo
+                      {t("project.demo")}
                     </Button>
                   )}
                 </div>
