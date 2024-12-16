@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import { BsBookFill, BsGithub } from "react-icons/bs";
 import { Row, Col } from "react-bootstrap";
 import "./ProjectCard.css";
 import { useTranslation } from "react-i18next";
@@ -13,7 +13,7 @@ function MortShopCard(props) {
     <Card className="project-card">
       <Card.Body className="p-0">
         <Row className="g-0">
-          <Col md={6} className="position-relative">
+          <Col md={6} className="position-relative my-auto">
             <div className="image-container">
               <Card.Img
                 src={props.imgPath}
@@ -80,19 +80,44 @@ function MortShopCard(props) {
                 </div>
               </div>
 
-              <div className="mt-auto">
-                <div className="d-flex gap-3 justify-content-center">
-                  <Button
-                    variant="outline-primary"
-                    href={props.ghLink}
-                    target="_blank"
-                    className="project-btn"
-                  >
-                    <BsGithub className="me-2" />
-                    {t("github")}
-                  </Button>
-
-                  {props.demoLink && (
+              <div className="mt-auto container">
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <Button
+                      variant="outline-primary"
+                      href={props.ghBackLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsGithub className="me-2" />
+                      {t(" Back-end")}
+                    </Button>
+                  </div>
+                  <div className="col-6">
+                    <Button
+                      variant="outline-primary"
+                      href={props.ghFrontLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsGithub className="me-2" />
+                      {t("Front-end")}
+                    </Button>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-6">
+                    <Button
+                      variant="primary"
+                      href={props.DocumentationLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsBookFill className="me-2" />
+                      {t("Documentation")}
+                    </Button>
+                  </div>
+                  <div className="col-6">
                     <Button
                       variant="primary"
                       href={props.demoLink}
@@ -102,7 +127,7 @@ function MortShopCard(props) {
                       <CgWebsite className="me-2" />
                       {t("demo")}
                     </Button>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>

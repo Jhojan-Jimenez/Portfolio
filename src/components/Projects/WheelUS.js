@@ -91,19 +91,44 @@ function WheelUSCard(props) {
                 </div>
               </div>
 
-              <div className="mt-auto">
-                <div className="d-flex gap-3 justify-content-center">
-                  <Button
-                    variant="outline-primary"
-                    href={props.ghLink}
-                    target="_blank"
-                    className="project-btn"
-                  >
-                    <BsGithub className="me-2" />
-                    {t("project.github")}
-                  </Button>
-
-                  {props.demoLink && (
+              <div className="mt-auto container">
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <Button
+                      variant="outline-primary"
+                      href={props.ghBackLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsGithub className="me-2" />
+                      {t(" Back-end")}
+                    </Button>
+                  </div>
+                  <div className="col-6">
+                    <Button
+                      variant="outline-primary"
+                      href={props.ghFrontLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsGithub className="me-2" />
+                      {t("Front-end")}
+                    </Button>
+                  </div>
+                </div>
+                <div className="row">
+                  {/* <div className="col-6">
+                    <Button
+                      variant="primary"
+                      href={props.ghLink}
+                      target="_blank"
+                      className="project-btn"
+                    >
+                      <BsBookFill className="me-2" />
+                      {t("Documentation")}
+                    </Button>
+                  </div> */}
+                  <div className="col-6">
                     <Button
                       variant="primary"
                       href={props.demoLink}
@@ -111,9 +136,9 @@ function WheelUSCard(props) {
                       className="project-btn"
                     >
                       <CgWebsite className="me-2" />
-                      {t("project.demo")}
+                      {t("demo")}
                     </Button>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>

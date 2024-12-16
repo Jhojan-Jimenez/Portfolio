@@ -35,13 +35,6 @@ function Projects() {
             <WheelUSCard
               imgPath={WheelUSCreateRidePage}
               title="WheelUS"
-              highlightWords={[
-                "OpenStreetMap",
-                "Sistema de chat",
-                "WebSockets",
-                "Notificaciones",
-                "roles",
-              ]}
               technologies={[
                 {
                   name: "NodeJS",
@@ -73,7 +66,8 @@ function Projects() {
                 },
                 { name: "Typescript", icon: <SiTypescript /> },
               ]}
-              ghLink="https://github.com/Jhojan-Jimenez/WheelUS-Front"
+              ghBackLink="https://github.com/Jhojan-Jimenez/WheelUS-Back"
+              ghFrontLink="https://github.com/Jhojan-Jimenez/WheelUS-Front"
               demoLink="https://wheel-us-front.vercel.app"
             />
           </Col>
@@ -101,7 +95,9 @@ function Projects() {
                 },
                 { name: "Typescript", icon: <SiTypescript /> },
               ]}
-              ghLink="https://github.com/Jhojan-Jimenez/Front-Shop"
+              ghBackLink="https://github.com/Jhojan-Jimenez/Back-Shop"
+              ghFrontLink="https://github.com/Jhojan-Jimenez/Front-Shop"
+              DocumentationLink="https://mortshop.onrender.com/api/schema/swagger-ui/"
               demoLink="https://front-django-lemon.vercel.app"
             />
           </Col>

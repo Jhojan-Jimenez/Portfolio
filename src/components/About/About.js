@@ -34,7 +34,7 @@ function About() {
                     <br />
                     <br />
                     {t("aboutSkills")}
-                    <span className="purple">{t("projects")}</span>{" "}
+                    <span className="purple"> {t("aboutProjects")}</span>{" "}
                     {t("aboutCreativityAndTech")}
                     <br />
                     <br />

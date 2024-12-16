@@ -55,6 +55,7 @@
   "cloud": "cloud",
   "github": "GitHub",
   "demo": "Demo",
+  "aboutProjects": "projects",
   "project": {
     "description": "WheelUS is an innovative",
     "transportPlatform": "university transport platform",
@@ -70,7 +71,7 @@
     "featureImageUpload": "Image uploads to the",
     "cloud": "cloud",
     "notifications": "Notifications",
-    "instantNotifications": "instant notifications through WebSockets for smooth communication",
+    "instantNotifications": "through WebSockets for smooth communication",
     "featureRoleSwitch": "Switch between",
     "roles": "passenger and driver roles for personalized experiences",
     "featureDatabaseHandling": "Data handling with",
